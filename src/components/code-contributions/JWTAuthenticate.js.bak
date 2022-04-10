@@ -1,0 +1,39 @@
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
+import JWT from '../common/JWT';
+
+import { connect } from 'react-redux';
+import { validateToken } from '../../store/actions/userAction';
+
+const JWTAuthenticate = ({component: Component, ...rest}) => {    
+    const signin_route = <Route {...rest} render={props => ( <Redirect to={{
+            pathname: '/signin'
+        }}/>
+    )}/>
+
+    const protected_route = <Route {...rest} render={props => ( ( <Component {...props} /> ))}/>    
+
+    const jwt = JWT.get_jwt();
+    
+    if(jwt['token'] === null || jwt['username'] === null){
+        return signin_route;
+    }
+    else {
+        this.props.validateToken({
+            token: jwt['token'],
+            username: jwt['username']
+        });
+    }
+    if(this.props.auth.is_authenticated === true)
+        return protected_route;
+    else
+        return signin_route;
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        validateToken: (auth) => dispatch(validateToken(auth))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(JWTAuthenticate);
