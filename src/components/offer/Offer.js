@@ -59,7 +59,7 @@ class Offer extends Component {
                     </div>
                     <div className='col-4'>
                         <button className="btn btn-sm btn-full btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-                            <i class="fa fa-light fa-angle-down"></i> Advanced details
+                            <i className="fa fa-light fa-angle-down"></i> Advanced details
                         </button>
                     </div>
                     <div className='col-4'>

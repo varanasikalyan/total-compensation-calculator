@@ -5,7 +5,7 @@ class Loading extends Component {
         return (
             <Fragment>
                 <div className="d-flex justify-content-center loading-size fa-5x">
-                    <i class="fas fa-cog fa-spin"></i>
+                    <i className="fas fa-cog fa-spin"></i>
                 </div>
                 <div className="d-flex justify-content-center fa-3x">
                     Loading

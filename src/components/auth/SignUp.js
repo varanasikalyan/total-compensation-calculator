@@ -5,6 +5,8 @@ import Loading from '../common/loading/Loading';
 import { connect } from 'react-redux';
 import { createUser } from '../../store/actions/userActions';
 import { CREATE_USER_SUCCESS, CREATE_USER_ERROR } from '../../store/types/userTypes';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons'
 
 class SignUp extends Component {
     constructor(props) {
@@ -60,13 +62,7 @@ class SignUp extends Component {
                         <div className="wrap-login-style">
                             <form method="POST" onSubmit={this.handleSubmit} className="form-signin">
                                 <fieldset className="form-group">
-                                    <img
-                                        className="mb-3"
-                                        src={require("../../static/images/signup.png")}
-                                        alt="Sign Up"
-                                        width="60"
-                                        height="60"
-                                    />
+                                    <FontAwesomeIcon icon={faAddressCard} className="fa-4x sign-up-svg" />
                                     <h1 className="border-bottom mb-4 h3 mb-3 font-weight-normal">Join Us</h1>
                                     <div className="form-group">
                                         <label className="form-control-label" htmlFor="username">Username</label>
@@ -123,7 +119,7 @@ class SignUp extends Component {
                                 </fieldset>
                                 <div className="form-group">
                                     <input
-                                        className="btn btn-sm btn-md btn-primary btn-block"
+                                        className="btn btn-sm btn-md btn-success btn-block"
                                         id="submit"
                                         name="submit"
                                         type="submit"

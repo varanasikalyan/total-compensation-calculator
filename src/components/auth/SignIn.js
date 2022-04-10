@@ -3,6 +3,8 @@ import { Redirect } from 'react-router-dom';
 import Notifications, { notify } from 'react-notify-toast';
 import { connect } from 'react-redux';
 import { authenticateUser } from '../../store/actions/userActions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 
 class SignIn extends Component {	
     constructor() {
@@ -47,6 +49,7 @@ class SignIn extends Component {
 						<div className="wrap-login-style">
 							<form method="POST" action="" onSubmit={this.handleSubmit} className="form-signin">
 								<fieldset className="form-group">
+									<FontAwesomeIcon icon={faArrowRightToBracket} className="fa-4x sign-in-svg" />
 									<h1 className="border-bottom mb-4 h3 mb-3 font-weight-normal">Please sign in</h1>
 									<div className="form-group">
 										<label className="form-control-label" htmlFor="email">Email Address</label>

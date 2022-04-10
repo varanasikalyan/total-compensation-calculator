@@ -483,3 +483,13 @@ body {
 .loading-size {
   margin-top: 100px;
 }
+
+.sign-in-svg {
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+.sign-up-svg {
+  color: #28a745;
+  margin-bottom: 30px;
+}

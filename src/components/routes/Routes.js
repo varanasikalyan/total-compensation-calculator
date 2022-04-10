@@ -19,7 +19,7 @@ const Routes = () => (
 			<Route exact path='/forgot' component={ForgotPassword} />
 			<Route exact path='/loading' component={Loading} />
 
-			<Route exact path='/signout' component={requireAuth(SignOut)} />
+			<Route exact path='/signout' component={ requireAuth(SignOut) } />
 			<Route exact path='/profile' component={ requireAuth(UserProfile) } />
 			
 			<Route path='*' component={ NotFound } />	
