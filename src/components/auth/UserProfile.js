@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Notifications from 'react-notify-toast';
 import { connect } from 'react-redux';
 import { createUser } from '../../store/actions/userActions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 
 class UserProfile extends Component {    
     constructor(props) {
@@ -40,13 +42,7 @@ class UserProfile extends Component {
                 <div className="wrap-login-style">
                     <form method="POST" onSubmit={this.handleSubmit} className="form-signin">
                         <fieldset className="form-group">
-                            <img
-                                className="mb-3"
-                                src={require("../../static/images/update.png")}
-                                alt="Sign Up"
-                                width="60"
-                                height="60"
-                            />
+                            <FontAwesomeIcon icon={faPenToSquare} className="update-svg" />
                             <h1 className="border-bottom mb-4 h3 mb-3 font-weight-normal">Update Profile</h1>
                             <div className="form-group">
                                 <label className="form-control-label" htmlFor="username">Username</label>

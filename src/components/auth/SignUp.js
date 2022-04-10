@@ -5,8 +5,8 @@ import Loading from '../common/loading/Loading';
 import { connect } from 'react-redux';
 import { createUser } from '../../store/actions/userActions';
 import { CREATE_USER_SUCCESS, CREATE_USER_ERROR } from '../../store/types/userTypes';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAddressCard } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 
 class SignUp extends Component {
     constructor(props) {

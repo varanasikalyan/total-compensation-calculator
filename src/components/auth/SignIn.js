@@ -3,8 +3,8 @@ import { Redirect } from 'react-router-dom';
 import Notifications, { notify } from 'react-notify-toast';
 import { connect } from 'react-redux';
 import { authenticateUser } from '../../store/actions/userActions';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
 
 class SignIn extends Component {	
     constructor() {

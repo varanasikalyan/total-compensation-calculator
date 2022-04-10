@@ -493,3 +493,23 @@ body {
   color: #28a745;
   margin-bottom: 30px;
 }
+
+.welcome-svg {
+  color: #28a745;
+  margin-right: 5px;
+}
+
+.logout-svg {
+  color: #d9534f;
+  margin-right: 5px;
+}
+
+.gear-svg {
+  color: #007bff;
+  margin-right: 5px;
+}
+
+.update-svg {
+  color: #28a745;
+  margin-right: 5px;
+}
