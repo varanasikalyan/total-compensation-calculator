@@ -1,532 +1,461 @@
+@keyframes App-logo-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  /* font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
-    font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-    font-family: 'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif;
-    font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
-    font-family: "IBM Plex Mono ExtraLight", "Segoe UI", "Helvetica Neue", Helvetica, Roboto, 'Open Sans', FreeSans, sans-serif; */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    margin: 0;
+    padding: 0
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace
 }
 
 .page-wrap {
-  margin: 10px 30px 0px 30px;
+    margin: 10px 30px 0
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    color: #fff;
+    display: flex;
+    font-size: calc(10px + 2vmin);
+    min-height: 100vh
 }
 
 .App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    color: #61dafb
 }
 
 .btn-full {
-	width: 100%;
-	margin: 5px;
+    margin: 5px;
+    width: 100%
 }
 
 hr.dashed {
-	border: 2px dashed grey;
-	margin-top: 30px;
-	margin-bottom: 30px;
+    border: 2px dashed gray;
+    margin-bottom: 30px;
+    margin-top: 30px
 }
 
-.form-control {
-  border-radius: 0%;
-}
-
-.btn {
-  border-radius: 0%;
+.btn,.form-control {
+    border-radius: 0
 }
 
 .form-control:focus {
-  z-index: 2;
-  border-color: #007bff;
-  box-shadow: 0.5px 0.5px 0.5px rgba(0, 123, 255, 0.8) inset, 0.5px 0.5px 0.5px rgba(0, 123, 255, 0.8);
+    border-color: #007bff;
+    box-shadow: .5px .5px .5px rgba(0,123,255,.8) inset,.5px .5px .5px rgba(0,123,255,.8);
+    z-index: 2
 }
 
 .form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+    margin: 0 auto;
+    max-width: 330px;
+    padding: 15px;
+    width: 100%
 }
 
 .form-signin .checkbox {
-  font-weight: 400;
+    font-weight: 400
 }
 
 .form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  text-align: center !important;
-  padding: 10px;
-  font-size: 16px;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 10px;
+    position: relative;
+    text-align: center!important
 }
 
 .wrap-login-style {
-  width: 350px;
-  display: inline-block;
-  border-radius: 10px;
-  overflow: hidden;
-  justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
-  box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1);
-  -o-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1);
-  -ms-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    overflow: hidden;
+    text-align: center;
+    width: 350px
 }
 
 .form-signin .form-control:focus {
-  z-index: 2;
-  border-color: #3498db;
-  box-shadow: 1px 1px 1px rgba(40, 167, 69, 0.8) inset,
-    1px 1px 1px rgba(40, 167, 69, 0.8);
+    border-color: #3498db;
+    box-shadow: 1px 1px 1px rgba(40,167,69,.8) inset,1px 1px 1px rgba(40,167,69,.8);
+    z-index: 2
 }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;  
+.form-signin input[type=email] {
+    margin-bottom: -1px
 }
 
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
+.form-signin input[type=password] {
+    margin-bottom: 10px
 }
 
 #forgot {
-  text-decoration: none !important;
-  color: #3498db !important;
+    color: #3498db!important;
+    text-decoration: none!important
 }
 
-#signUpContainer {
-  text-align: center;
+#signInContainer,#signUpContainer {
+    text-align: center
 }
 
 #signInContainer {
-  text-align: center;
-  padding-bottom: 25px;
-  min-height: 60vh;
+    min-height: 60vh;
+    padding-bottom: 25px
 }
 
 #notaMember {
-  margin-top: 10px;
+    margin-top: 10px
 }
 
-#signIn {
-  text-decoration: none !important;
-  color: #3498db !important;
+#signIn,#signUp {
+    color: #3498db!important;
+    text-decoration: none!important
 }
 
-#signUp {
-  text-decoration: none !important;
-  color: #3498db !important;
-}
-
-/*Footer*/
 #myFooter {
-  background-color: #0091c2;
     background: -webkit-gradient(linear,left top,right bottom,from(#003a5d),to(#0091c2));
     background: linear-gradient(#003a5d,#0091c2);
-    color: #fff;    
-    box-shadow: 0px -2px 1px #566573;
+    background-color: #0091c2;
+    box-shadow: 0-2px 1px #566573;
+    color: #fff
 }
 
 #myFooter .footer-copyright {
-  padding-top: 3px;
-  padding-bottom: 3px;
-  text-align: center;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    text-align: center
 }
 
 #myFooter .footer-copyright p {
-  margin: 10px;
-  color: #fff;
+    color: #fff;
+    margin: 10px
 }
 
 #myFooter ul {
-  list-style-type: none;
-  padding-left: 0;
-  line-height: 1.7;
+    line-height: 1.7;
+    list-style-type: none;
+    padding-left: 0
 }
 
 #myFooter h6 {
-  font-size: 16px;
-  color: white;
-  font-weight: bold;
-  margin-top: 30px;
-  text-decoration: underline;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 30px;
+    text-decoration: underline
 }
 
 #myFooter a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none
 }
 
-#myFooter a:hover,
-#myFooter a:focus {
-  text-decoration: none;
-  color: #28a745;
-  font-size: 15px;
+#myFooter a:focus,#myFooter a:hover {
+    color: #28a745;
+    font-size: 15px;
+    text-decoration: none
 }
 
 #myFooter .myCols {
-  text-align: center;
+    text-align: center
 }
 
 #myFooter .social-networks {
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 38px;
+    padding-bottom: 38px;
+    padding-top: 30px;
+    text-align: center
 }
 
 #myFooter .social-networks a {
-  font-size: 32px;
-  margin-right: 5px;
-  margin-left: 5px;
-  color: #f9f9f9;
-  padding: 10px;
-  transition: 0.2s;
+    color: #f9f9f9;
+    font-size: 32px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+    transition: .2s
 }
 
 #myFooter .social-networks a:hover {
-  text-decoration: none;
+    text-decoration: none
 }
 
 #myFooter .facebook:hover {
-  color: #0077e2;
+    color: #0077e2
 }
 
 #myFooter .google:hover {
-  color: #ef1a1a;
+    color: #ef1a1a
 }
 
 #myFooter .twitter:hover {
-  color: #00aced;
+    color: #00aced
 }
 
-@media screen and (max-width: 767px) {
-  #myFooter {
-    text-align: center;
-  }
+@media screen and (max-width:767px) {
+    #myFooter {
+        text-align: center
+    }
 }
 
-/*Header*/
 .logo {
-  width: 60px;
-  height: 60px;
+    height: 60px;
+    width: 60px
 }
 
 .footer {
-  height: 5vh;
+    height: 5vh
 }
 
 .app-name {
-  vertical-align: bottom;
-  font-size: 25px;
-  font-weight: 500;
-  margin-left: 10px;  
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 10px;
+    vertical-align: bottom
 }
 
-.square-primary {
-  border-color: #3498db;
-  border-bottom-style: none;
-  color: #28a745;
-  padding-bottom: 0px;
+.square-primary,.square-success {
+    border-bottom-style: none;
+    border-color: #3498db;
+    color: #28a745;
+    padding-bottom: 0
 }
 
 .square-success {
-  border-color: #28a745;
-  border-bottom-style: none;
-  color: #3498db;
-  padding-bottom: 0px;
+    border-color: #28a745;
+    color: #3498db
 }
 
 #companyName {
-  vertical-align: middle;
-  margin: 0px 10px 0px 5px;
-  font-size: 30px;
-  letter-spacing: 5px;
-  font-weight: 400;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin: 0 10px 0 5px;
+    vertical-align: middle
 }
 
 .icon {
-  vertical-align: sub;
-  width: 20px;
-  height: 20px;
+    height: 20px;
+    vertical-align: sub;
+    width: 20px
 }
 
-.dropdown-text {
-  color: #000;
-  font-weight: 400;
-  margin-right: 5px;
-  margin-left: 5px;
+.dropdown-text,.dropdown-text:hover,.icon-text {
+    color: #000;
+    font-weight: 400;
+    margin-left: 5px;
+    margin-right: 5px
 }
 
-.dropdown-text:hover {
-  color: #3498db;
-  font-weight: 400;
-  margin-right: 5px;
-  margin-left: 5px;
+.dropdown-text:hover,.icon-text {
+    color: #3498db
 }
 
 .icon-text {
-  color: #fff;
-  font-weight: 400;
-  margin-right: 5px;
-  margin-left: 5px;
+    color: #fff
 }
 
-.icon-text:hover {
-  color: #28a745;
-  font-weight: 400;
-  margin-right: 5px;
-  margin-left: 5px;
+.border-button:hover .icon-text,.icon-text:hover {
+    color: #28a745;
+    font-weight: 400;
+    margin-left: 5px;
+    margin-right: 5px
 }
 
 .navbar {
-  background-color: #003a5d !important;  
-  box-shadow: 0 2px 1px #566573;
+    background-color: #003a5d!important;
+    box-shadow: 0 2px 1px #566573
 }
 
 .border-button {
-  border: 1px solid #b2babb;
-  border-radius: 2px;
+    border: 1px solid #b2babb;
+    border-radius: 2px
 }
 
 .border-button:hover {
-  border: 1px solid #28a745;
-  border-radius: 2px;
+    border: 1px solid #28a745;
+    border-radius: 2px
 }
-
-.border-button:hover .icon-text {
-  color: #28a745;
-  font-weight: 400;
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
-/* @media (min-width: 576px) { .body {background-color: red; } }
-
-@media (min-width: 768px) {.body {background-color:green; } }
-
-@media (min-width: 992px) { .body {background-color:blue; } }
-
-@media (min-width: 1200px) { .body {background-color:yellow; } } */
 
 .wrapper {
-  display: inline-block;
-  border-radius: 0px;
-  overflow: hidden;
-  box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1);
-  -o-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1);
-  -ms-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    display: inline-block;
+    overflow: hidden
 }
 
 .col-centered {
-    margin: 20px 0px 20px 0px;    
+    margin: 20px 0
 }
 
 .font-header {
     font-size: 20px;
     font-weight: 500;
-    margin: 15px !important;
+    margin: 15px!important
 }
 
-/*NotFound*/
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box
 }
 
 #notfound {
-  position: relative;
-  height: 100vh;
+    height: 100vh;
+    position: relative
 }
 
-#notfound .notfound {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+#notfound .notfound,.notfound .notfound-404 h1 {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%)
 }
 
 .notfound {
-  max-width: 520px;
-  width: 100%;
-  line-height: 1.4;
-  text-align: center;
+    line-height: 1.4;
+    max-width: 520px;
+    text-align: center;
+    width: 100%
 }
 
 .notfound .notfound-404 {
-  position: relative;
-  height: 240px;
+    height: 240px;
+    position: relative
 }
 
 .notfound .notfound-404 h1 {
-  font-family: 'Montserrat', sans-serif;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 252px;
-  font-weight: 900;
-  margin: 0px;
-  color: #262626;
-  text-transform: uppercase;
-  letter-spacing: -40px;
-  margin-left: -20px;
+    color: #262626;
+    font-family: "Montserrat",sans-serif;
+    font-size: 252px;
+    font-weight: 900;
+    letter-spacing: -40px;
+    margin: 0;
+    text-transform: uppercase
 }
 
 .notfound .notfound-404 h1>span {
-  text-shadow: -8px 0px 0px #fff;
+    text-shadow: -8px 0 0 #fff
+}
+
+.notfound .notfound-404 h3,.notfound h2 {
+    font-family: "Cabin",sans-serif;
+    text-transform: uppercase
 }
 
 .notfound .notfound-404 h3 {
-  font-family: 'Cabin', sans-serif;
-  position: relative;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #262626;
-  margin: 0px;
-  letter-spacing: 3px;
-  padding-left: 6px;
+    color: #262626;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0;
+    padding-left: 6px;
+    position: relative
 }
 
 .notfound h2 {
-  font-family: 'Cabin', sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #000;
-  margin-top: 0px;
-  margin-bottom: 25px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    margin-top: 0
 }
 
-@media only screen and (max-width: 767px) {
-  .notfound .notfound-404 {
-    height: 200px;
-  }
-  .notfound .notfound-404 h1 {
-    font-size: 200px;
-  }
+@media only screen and (max-width:767px) {
+    .notfound .notfound-404 {
+        height: 200px
+    }
+
+    .notfound .notfound-404 h1 {
+        font-size: 200px
+    }
 }
 
-@media only screen and (max-width: 480px) {
-  .notfound .notfound-404 {
-    height: 162px;
-  }
-  .notfound .notfound-404 h1 {
-    font-size: 162px;
-    height: 150px;
-    line-height: 162px;
-  }
-  .notfound h2 {
-    font-size: 16px;
-  }
+@media only screen and (max-width:480px) {
+    .notfound .notfound-404 {
+        height: 162px
+    }
+
+    .notfound .notfound-404 h1 {
+        font-size: 162px;
+        height: 150px;
+        line-height: 162px
+    }
+
+    .notfound h2 {
+        font-size: 16px
+    }
 }
 
 .offer-count {
-  text-align: right;
-  font-size: larger;
-  font-weight: 700;
+    font-size: larger;
+    font-weight: 700;
+    text-align: right
 }
 
 .inc-btn {
-	margin-right: 5px;
-  color: #F5B7B1;
-  cursor: pointer;
+    color: #f5b7b1;
+    cursor: pointer;
+    margin-right: 5px
 }
 
 .loading-size {
-  margin-top: 100px;
+    margin-top: 100px
 }
 
-.sign-in-svg {
-  color: #007bff;
-  margin-bottom: 30px;
+.sign-in-svg,.sign-up-svg {
+    color: #007bff;
+    margin-bottom: 30px
 }
 
 .sign-up-svg {
-  color: #28a745;
-  margin-bottom: 30px;
+    color: #28a745
 }
 
-.welcome-svg {
-  color: #28a745;
-  margin-right: 5px;
+.logout-svg,.welcome-svg {
+    color: #28a745;
+    margin-right: 5px
 }
 
 .logout-svg {
-  color: #d9534f;
-  margin-right: 5px;
+    color: #d9534f
 }
 
-.gear-svg {
-  color: #007bff;
-  margin-right: 5px;
+.gear-svg,.update-svg {
+    color: #007bff;
+    margin-right: 5px
 }
 
 .update-svg {
-  color: #28a745;
-  margin-right: 5px;
+    color: #28a745
 }
 
 .btn-success {
-  background-color: #28a745;
-  border-color: #28a745;
+    background-color: #28a745;
+    border-color: #28a745
 }
 
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+    background-color: #007bff;
+    border-color: #007bff
 }
 
 .money-wave-svg {
-  color: #28a745;
-  margin-right: 5px;
-  width: 28px;
-  height: 28px;
+    color: #28a745;
+    height: 28px;
+    margin-right: 5px;
+    width: 28px
 }
