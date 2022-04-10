@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import SignedOutLinks from './SignedOutLinks';
 import SignedInLinks from './SignedInLinks';
 import { connect } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPiggyBank } from '@fortawesome/free-solid-svg-icons';
 
 const Header = (props) => {
 	let userOptions;
@@ -17,6 +19,7 @@ const Header = (props) => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
             <Link to="/" className="navbar-brand">
+              <FontAwesomeIcon icon={faPiggyBank} className="money-wave-svg" />
               <span className="app-name">Total Compensation Calculator</span>
             </Link>
             <form className="d-flex">

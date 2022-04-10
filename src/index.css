@@ -523,3 +523,10 @@ body {
   background-color: #007bff;
   border-color: #007bff;
 }
+
+.money-wave-svg {
+  color: #28a745;
+  margin-right: 5px;
+  width: 28px;
+  height: 28px;
+}
