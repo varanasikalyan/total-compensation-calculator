@@ -1,0 +1,129 @@
+syntax = "proto3";
+
+option go_package = "/idl/offercomp/offercomppb";
+option java_multiple_files = true;
+option java_outer_classname = "OfferCompProto";
+option java_package = "offercomp";
+
+// TODO: rename the package to ?
+package offercomp;
+
+// Breakdown represents the breakdown section
+// should it be monthly??
+// TODO: we may want to check for different countries breakdown and make this object into a breakdown dictionary
+message Breakdown {
+  // period:  of the breakdown (monthly, yearly etc, default as monthly??)
+  string period = 1;
+  // basic : component, should this be fixed to all countries??
+  int64 basic = 2;
+  // hra : house rental allowance
+  int64 hra = 3;
+  // special_allowance: could be a group of allowances grouped
+  int64 special_allowance = 4;
+  // others : remainder of the breakdown category
+  int64 others = 5;
+}
+
+// Bonus represents any kind of bonus component like annual or joining etc
+message Bonus {
+  // is_one_time : specifies if the bonus allotted is a one time like a joining bonus
+  bool is_one_time = 1;
+  // spread_over_in_days : specifies if the spread over period like a month or year etc
+  int32 spread_over_in_days = 2;
+  // paid_over : is the paid over period like (monthly, quarterly, yearly etc)
+  int32 paid_over = 3;
+  // start_date : is optional value if the bonus start date is customized
+  string start_date = 4;
+  // amount alloted
+  int64 amount = 5;
+}
+
+// IncrementCycle contains the calculation data for the next years to come projections
+message IncrementCycle {
+  // financial_year_start_month :  start of fiscal year cycle of the country
+  string financial_year_start_month = 1;
+  // increment_cycle_frequency : number of time thhe increment hhappens for the company
+  int32 increment_cycle_frequency = 2;
+  // increment_cycle_first_month : this is tricky, the client should consider the earliest month of the year
+  string increment_cycle_first_month = 3;
+  // increment percentage
+  string yoy_increment_percentage = 4;
+
+}
+
+// GetProjectionsRequest has the details of the offer
+// TODO: should be able to get the pdf encoded data from client as input as well ( a separate GetProjectionsFromPDFRequest?)
+message GetProjectionsRequest {
+  // tax_country : country where the taxes are applied
+  string tax_country = 1;
+  // Currency: currency of the income to be paid
+  string currency = 2;
+  // ctc: total cost to the company
+  int64 ctc = 3;
+  // breakdown: salary breakdown for a period
+  Breakdown breakdown = 4;
+  // Annual bonus
+  Bonus annual_bonus = 5;
+  // joining bonus
+  Bonus joining_bonus = 6;
+  // second annual joining bonus
+  Bonus second_annual_joining_bonus = 7;
+  // increment cycle details
+  IncrementCycle increment_cycle = 8;
+  //date of joining : to calculate the start month of the projections (month-YYYY format)
+  string date_of_joining = 9;
+}
+
+// IncomeProjection represents the income data projection class
+message IncomeProjection {
+  int64 index = 1;
+  string month_year = 2; // month_year : (month-YYYY format)
+  int64 bonus = 3;
+  int64 basic = 4;
+  int64 hra = 5;
+  int64 special_allowance = 6;
+  int64 others = 7;
+  int64 total_before_deductions = 8;
+}
+
+// IncomeProjectionRaw represents the income data projection class
+message IncomeProjectionRaw {
+  string index = 1;
+  string month_year = 2; // month_year : (month-YYYY format)
+  string bonus = 3;
+  string basic = 4;
+  string hra = 5;
+  string special_allowance = 6;
+  string others = 7;
+  string total_before_deductions = 8;
+}
+
+
+// GetProjectionsResponse represents the projections data from the request
+message GetProjectionsResponse {
+  // array data series of projections
+  repeated IncomeProjection projections = 1;
+}
+
+// GetProjectionsRawRequest with just key-value pairs
+message GetProjectionsRawRequest {
+  map<string, string> input = 1;
+}
+
+// GetProjectionsRawResponse represents the projections data from the request
+message GetProjectionsRawResponse {
+  // array data series of projections
+  repeated IncomeProjectionRaw projections = 1;
+}
+
+service OfferComp {
+  // gRPC service
+  //
+  // To perform the projections of the offer
+  // Should be able to compare multiple offers
+  //
+  // GetProjections procedure to get the offer data as request and projection as a response info
+  rpc GetProjections(GetProjectionsRequest) returns (GetProjectionsResponse) {}
+  // GetProjectionsRaw is the undefined structure endpoint
+  rpc GetProjectionsRaw(GetProjectionsRawRequest) returns (GetProjectionsRawResponse) {}
+}
