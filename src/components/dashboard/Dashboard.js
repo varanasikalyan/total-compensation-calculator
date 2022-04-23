@@ -14,7 +14,7 @@ class Dashboard extends Component {
 			<div className="container-fluid">            
 				<div className="row">
 					<div className="col-12 col-lg-6 col-centered">
-						<button className="btn btn-sm btn-full btn-outline-secondary" type="button" onclick={CallGetProjectionsRaw()}>
+						<button className="btn btn-sm btn-full btn-outline-secondary" type="button" onClick={CallGetProjectionsRaw()}>
                             Click
                         </button>
 						<OfferList/>

@@ -9,8 +9,7 @@ const client = new OfferCompClient('http://localhost:8080', null, null);
 const CallGetProjectionsRaw = () => {
     const request = new GetProjectionsRawRequest();
 
-
-    client.GetProjectionsRaw(request, {}, (err, response) => {
+    client.getProjectionsRaw(request, {}, (err, response) => {
       if (response == null) {
         console.log(err)
       }else {
