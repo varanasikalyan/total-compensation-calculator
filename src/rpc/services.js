@@ -1,17 +1,13 @@
-import { OfferComp } from './offer_grpc_web_pb';
+import { OfferCompClient } from './offer_grpc_web_pb';
 import { 
-    GetProjectionsRequest, 
-    GetProjectionsResponse, 
-    GetProjectionsRawRequest,
-    GetProjectionsRawResponse
+    GetProjectionsRawRequest
 } from './offer_pb.js';
 	
 
-let client = new OfferComp('http://localhost:8080', null, null);
+const client = new OfferCompClient('http://localhost:8080', null, null);
 
 const CallGetProjectionsRaw = () => {
     const request = new GetProjectionsRawRequest();
-    request.setInput('INR');
 
 
     client.GetProjectionsRaw(request, {}, (err, response) => {
