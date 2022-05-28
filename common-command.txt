@@ -1,4 +1,14 @@
 docker run -d --name total-compensation-calculator -p 8080:8080 -p 8081:8081 varanasikalyan/total-compensation-calculator:latest
 
+docker run --network=host --name total-compensation-calculator -p 8000:8000 -p 9901:9901 varanasikalyan/total-compensation-calculator:latest
+
 protoc -I. offer.proto --js_out=import_style=commonjs:. --grpc-web_out=import_style=commonjs,mode=grpcwebtext:.
 protoc -I. offer.proto --js_out=import_style=commonjs,binary:. --grpc-web_out=import_style=commonjs,mode=grpcwebtext:.
+
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id
+
+docker build -t varanasikalyan/total-compensation-calculator:latest .
+
+docker stop $(docker ps -a -q)
+
+docker rm $(docker ps -a -q)
