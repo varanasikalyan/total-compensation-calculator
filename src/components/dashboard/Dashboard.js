@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import OfferList from '../offer/OfferList';
 import OfferResults from '../offer/OfferResults';
-import CallGetProjectionsRaw from '../../rpc/services';
 
 class Dashboard extends Component {
   render() {
@@ -14,9 +13,6 @@ class Dashboard extends Component {
 			<div className="container-fluid">            
 				<div className="row">
 					<div className="col-12 col-lg-6 col-centered">
-						<button className="btn btn-sm btn-full btn-outline-secondary" type="button" onClick={CallGetProjectionsRaw()}>
-                            Click
-                        </button>
 						<OfferList/>
 					</div>
 					<div className="col-12 col-lg-6 col-centered">
