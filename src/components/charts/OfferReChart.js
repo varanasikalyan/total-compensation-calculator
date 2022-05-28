@@ -28,10 +28,10 @@ const data = [
   },
 ];
 
-class OfferChart extends PureComponent {
+class OfferReChart extends PureComponent {
   render() {
     return (
-      <ResponsiveContainer width="100%" aspect={2}>
+      <ResponsiveContainer width="100%" height="auto" aspect={2}>
         <BarChart
           width={500}
           height={300}
@@ -56,4 +56,4 @@ class OfferChart extends PureComponent {
   }
 }
 
-export default OfferChart;
+export default OfferReChart;
