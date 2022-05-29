@@ -15,8 +15,8 @@ class OfferReChart extends PureComponent {
             left: 20,
             bottom: 5,
           }}
-          barGap={25}
-          barSize={30}
+          barGap={5}
+          barSize={5}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
@@ -26,11 +26,6 @@ class OfferReChart extends PureComponent {
           <Bar dataKey="Bonus" stackId="company1" fill="#1E8449" />
           <Bar dataKey="HRA" stackId="company1" fill="#27AE60" />
           <Bar dataKey="Special Allowance" stackId="company1" fill="#7DCEA0" />
-
-          <Bar dataKey="Basic" stackId="company2" fill="#154360" />
-          <Bar dataKey="Bonus" stackId="company2" fill="#1F618D" />
-          <Bar dataKey="HRA" stackId="company2" fill="#2980B9" />
-          <Bar dataKey="Special Allowance" stackId="company2" fill="#7FB3D5" />
         </BarChart>
       </ResponsiveContainer>
     );
