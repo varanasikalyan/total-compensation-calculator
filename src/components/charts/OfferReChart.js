@@ -4,7 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 class OfferReChart extends PureComponent {
   render() {
     return (
-      <ResponsiveContainer width="100%" height="auto" aspect={2}>
+      <ResponsiveContainer width="95%" aspect={2.2}>
         <BarChart
           width={500}
           height={300}
