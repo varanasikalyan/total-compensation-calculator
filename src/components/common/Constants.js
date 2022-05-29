@@ -1,5 +1,5 @@
 const OFFERS = {
-    MAX: 4
+    MAX: 2
 }
 
 export default OFFERS;

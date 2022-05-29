@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 class OfferReChart extends PureComponent {
   render() {
@@ -21,11 +21,15 @@ class OfferReChart extends PureComponent {
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
-          <Legend />
-          <Bar dataKey="Bonus" stackId="a" fill="#8884d8" />
-          <Bar dataKey="Basic" stackId="a" fill="#82ca9d" />
-          <Bar dataKey="HRA" stackId="a" fill="#8824d8" />
-          <Bar dataKey="Special Allowance" stackId="a" fill="#2884d8" />
+          <Bar dataKey="Bonus" stackId="company1" fill="#7DCEA0" />
+          <Bar dataKey="Basic" stackId="company1" fill="#27AE60" />
+          <Bar dataKey="HRA" stackId="company1" fill="#1E8449" />
+          <Bar dataKey="Special Allowance" stackId="company1" fill="#145A32" />
+
+          <Bar dataKey="Bonus" stackId="company2" fill="#EC7063" />
+          <Bar dataKey="Basic" stackId="company2" fill="#E74C3C" />
+          <Bar dataKey="HRA" stackId="company2" fill="#B03A2E" />
+          <Bar dataKey="Special Allowance" stackId="company2" fill="#78281F" />
         </BarChart>
       </ResponsiveContainer>
     );

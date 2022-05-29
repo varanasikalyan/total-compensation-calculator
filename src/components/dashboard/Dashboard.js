@@ -12,10 +12,10 @@ class Dashboard extends Component {
 		return (      
 			<div className="container-fluid">            
 				<div className="row">
-					<div className="col-12 col-lg-6 col-centered">
+					<div className="col-12 col-lg-5 col-centered">
 						<OfferList/>
 					</div>
-					<div className="col-12 col-lg-6 col-centered">
+					<div className="col-12 col-lg-7 col-centered">
 						<OfferResults />
 					</div>            
 				</div>
