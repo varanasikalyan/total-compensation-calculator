@@ -1,5 +1,5 @@
 import axios from 'axios';
-import API from '../../components/common/APIHelper';
+import { API } from '../../components/common/Helper';
 import {CREATE_OFFER_SUCCESS, 
         CREATE_OFFER_ERROR, 
         GET_OFFERS_SUCCESS, 

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import API from '../../components/common/APIHelper';
+import { API } from '../../components/common/Helper';
 import JWT from '../../components/common/JWT';
 
 import { CREATE_USER_SUCCESS,

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { GenerateRandom } from '../common/Helper';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -39,39 +40,22 @@ export const options = {
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
-function generateRandom(min = 0, max = 100) {
-
-    // find diff
-    let difference = max - min;
-
-    // generate random number 
-    let rand = Math.random();
-
-    // multiply with difference 
-    rand = Math.floor( rand * difference);
-
-    // add with min value 
-    rand = rand + min;
-
-    return rand;
-}
-
 export const data = {
   labels,
   datasets: [
     {
       label: 'Dataset 1',
-      data: labels.map(() => generateRandom(-1000, 1000)),
+      data: labels.map(() => GenerateRandom(-1000, 1000)),
       backgroundColor: 'rgb(255, 99, 132)',
     },
     {
       label: 'Dataset 2',
-      data: labels.map(() => generateRandom(-1000, 1000)),
+      data: labels.map(() => GenerateRandom(-1000, 1000)),
       backgroundColor: 'rgb(75, 192, 192)',
     },
     {
       label: 'Dataset 3',
-      data: labels.map(() => generateRandom(-1000, 1000)),
+      data: labels.map(() => GenerateRandom(-1000, 1000)),
       backgroundColor: 'rgb(53, 162, 235)',
     },
   ],

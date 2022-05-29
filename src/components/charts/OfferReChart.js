@@ -1,33 +1,6 @@
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const data = [
-  {
-    name: 'Year 1',
-    uv: 100,
-    "Base Salary": 0,
-    amt: 0,
-  },
-  {
-    name: 'Year 2',
-    uv: 100,
-    "Base Salary": 0,
-    amt: 0,
-  },
-  {
-    name: 'Year 3',
-    uv: 100,
-    "Base Salary": 0,
-    amt: 0,
-  },
-  {
-    name: 'Year 4',
-    uv: 100,
-    "Base Salary": 0,
-    amt: 0,
-  },
-];
-
 class OfferReChart extends PureComponent {
   render() {
     return (
@@ -35,7 +8,7 @@ class OfferReChart extends PureComponent {
         <BarChart
           width={500}
           height={300}
-          data={data}
+          data={this.props.data}
           margin={{
             top: 5,
             right: 30,
@@ -44,12 +17,15 @@ class OfferReChart extends PureComponent {
           }}
           barSize={30}
         >
-          <XAxis dataKey="name" scale="point" padding={{ left: 50, right: 50 }} />
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <CartesianGrid strokeDasharray="3 3" />
-          <Bar dataKey="Base Salary" fill="#8884d8" background={{ fill: '#eee' }} />
+          <Bar dataKey="Bonus" stackId="a" fill="#8884d8" />
+          <Bar dataKey="Basic" stackId="a" fill="#82ca9d" />
+          <Bar dataKey="HRA" stackId="a" fill="#8824d8" />
+          <Bar dataKey="Special Allowance" stackId="a" fill="#2884d8" />
         </BarChart>
       </ResponsiveContainer>
     );
