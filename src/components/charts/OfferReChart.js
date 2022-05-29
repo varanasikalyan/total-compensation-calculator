@@ -15,6 +15,7 @@ class OfferReChart extends PureComponent {
             left: 20,
             bottom: 5,
           }}
+          barGap={25}
           barSize={30}
         >
           <CartesianGrid strokeDasharray="3 3" />
