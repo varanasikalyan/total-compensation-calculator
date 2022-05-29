@@ -22,15 +22,15 @@ class OfferReChart extends PureComponent {
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
-          <Bar dataKey="Bonus" stackId="company1" fill="#7DCEA0" />
-          <Bar dataKey="Basic" stackId="company1" fill="#27AE60" />
-          <Bar dataKey="HRA" stackId="company1" fill="#1E8449" />
-          <Bar dataKey="Special Allowance" stackId="company1" fill="#145A32" />
+          <Bar dataKey="Basic" stackId="company1" fill="#145A32" />
+          <Bar dataKey="Bonus" stackId="company1" fill="#1E8449" />
+          <Bar dataKey="HRA" stackId="company1" fill="#27AE60" />
+          <Bar dataKey="Special Allowance" stackId="company1" fill="#7DCEA0" />
 
-          <Bar dataKey="Bonus" stackId="company2" fill="#EC7063" />
-          <Bar dataKey="Basic" stackId="company2" fill="#E74C3C" />
-          <Bar dataKey="HRA" stackId="company2" fill="#B03A2E" />
-          <Bar dataKey="Special Allowance" stackId="company2" fill="#78281F" />
+          <Bar dataKey="Basic" stackId="company2" fill="#154360" />
+          <Bar dataKey="Bonus" stackId="company2" fill="#1F618D" />
+          <Bar dataKey="HRA" stackId="company2" fill="#2980B9" />
+          <Bar dataKey="Special Allowance" stackId="company2" fill="#7FB3D5" />
         </BarChart>
       </ResponsiveContainer>
     );
