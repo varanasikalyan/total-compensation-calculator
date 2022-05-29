@@ -1,3 +1,5 @@
-const MAX_OFFERS = 4;
+const OFFERS = {
+    MAX: 4
+}
 
-export default MAX_OFFERS;
+export default OFFERS;

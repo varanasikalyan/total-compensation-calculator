@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Offer from './Offer';
 import initialOffer from './OfferModel';
-import MAX_OFFERS from '../common/Constants';
+import OFFERS from '../common/Constants';
 
 class OfferList extends Component {
 	state = {
@@ -26,7 +26,7 @@ class OfferList extends Component {
     };
 
     handleNewOfferAddition = () => {
-        if (this.state.offers.length < MAX_OFFERS) {
+        if (this.state.offers.length < OFFERS.MAX) {
             const tamperable_offers = Object.assign([], this.state.offers);
 			let newOffer = initialOffer;
             tamperable_offers.push(newOffer);
