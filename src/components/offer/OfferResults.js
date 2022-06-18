@@ -8,7 +8,12 @@ class OfferResults extends Component {
   	render() {
     	return (
 			<Fragment>
+				<div className='category-header'><u>Salary Projection</u></div>
+				<br/>
     			<OfferReChart data={ yearGrouping(RECHARTS.data) }/>
+				<br/>
+				<div className='category-header'><u>Salary Breakup</u></div>
+				<br/>
 				<CompensationSummaryTable />
 			</Fragment>
     	)

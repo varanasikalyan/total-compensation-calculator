@@ -376,7 +376,13 @@ hr.dashed {
 .offer-count {
     font-size: larger;
     font-weight: 700;
-    text-align: right
+    text-align: right;
+}
+
+.category-header {
+    font-size: larger;
+    font-weight: 700;
+    text-align: center;
 }
 
 .inc-btn {

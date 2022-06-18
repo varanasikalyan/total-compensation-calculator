@@ -46,7 +46,7 @@ function Row(props) {
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
               <Typography variant="h6" gutterBottom component="div">
-                Monthly Break-up
+                Monthly Breakup
               </Typography>
               <Table size="small" aria-label="purchases">
                 <TableHead>
