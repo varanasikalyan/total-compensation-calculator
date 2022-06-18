@@ -339,4 +339,45 @@ const RECHARTS = {
     ]
 }
 
-export default RECHARTS;
+let yearGrouping = (fullData) => {
+  let yearData = [];
+  fullData.forEach(year => {
+    if (year["name"] !== "") {
+      let idx = yearExists(yearData, year["name"].split(" ")[1])
+      if (idx > -1) {
+        yearData[idx]["Basic"] += year["Basic"]
+        yearData[idx]["Bonus"] += year["Bonus"]
+        yearData[idx]["HRA"] += year["HRA"]
+        yearData[idx]["Special Allowance"] += year["Special Allowance"]
+        yearData[idx]["Months"].push(year)
+      } else {
+        yearData.push(
+          {
+            name: year["name"].split(" ")[1],
+            "Basic": year["Basic"],
+            "Bonus": year["Bonus"],
+            "HRA": year["HRA"],
+            "Special Allowance": year["Special Allowance"],
+            "Months": [
+              year
+            ]
+          }
+        )
+      }
+    }
+  });
+  return yearData;
+}
+
+let yearExists = (yearData, year) => {
+  let found = -1;
+  for(let i = 0; i < yearData.length; i++) {
+    if (yearData[i].name === year) {
+        found = i;
+        break;
+    }
+  }
+  return found;
+}
+
+export {RECHARTS, yearGrouping};

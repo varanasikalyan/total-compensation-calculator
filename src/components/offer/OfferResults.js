@@ -1,14 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import OfferReChart from "../charts/OfferReChart";
 
-import RECHARTS from '../mock/Mock';
+import { RECHARTS, yearGrouping } from '../mock/Mock';
 
 class OfferResults extends Component {
-	state = {}
   	render() {
     	return (
 			<Fragment>
-    			<OfferReChart data={RECHARTS.data}/>
+    			<OfferReChart data={ yearGrouping(RECHARTS.data) }/>
 			</Fragment>
     	)
   	}
