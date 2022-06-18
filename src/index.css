@@ -439,3 +439,7 @@ hr.dashed {
     margin-right: 5px;
     width: 28px
 }
+
+.hand {
+    cursor: pointer;
+}
