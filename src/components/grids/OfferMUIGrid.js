@@ -15,7 +15,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 import { RECHARTS, yearGrouping } from '../mock/Mock';
-import { PayRound } from '../common/Helper';
+import { PayRound, NumberWithCommas } from '../common/Helper';
 
 function Row(props) {
   const { row } = props;
@@ -36,10 +36,10 @@ function Row(props) {
         <TableCell component="th" scope="row">
           {row.name}
         </TableCell>
-        <TableCell align="right">&#x20B9;{PayRound(row.Basic)}</TableCell>
-        <TableCell align="right">&#x20B9;{PayRound(row.Bonus)}</TableCell>
-        <TableCell align="right">&#x20B9;{PayRound(row.HRA)}</TableCell>
-        <TableCell align="right">&#x20B9;{PayRound(row["Special Allowance"])}</TableCell>
+        <TableCell align="right">{NumberWithCommas(PayRound(row.Basic))}</TableCell>
+        <TableCell align="right">{NumberWithCommas(PayRound(row.Bonus))}</TableCell>
+        <TableCell align="right">{NumberWithCommas(PayRound(row.HRA))}</TableCell>
+        <TableCell align="right">{NumberWithCommas(PayRound(row["Special Allowance"]))}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
@@ -64,10 +64,10 @@ function Row(props) {
                       <TableCell component="th" scope="row">
                         {monthRow.name}
                       </TableCell>
-                      <TableCell align="right">&#x20B9;{PayRound(monthRow.Basic)}</TableCell>
-                      <TableCell align="right">&#x20B9;{PayRound(monthRow.Bonus)}</TableCell>
-                      <TableCell align="right">&#x20B9;{PayRound(monthRow.HRA)}</TableCell>
-                      <TableCell align="right">&#x20B9;{PayRound(monthRow["Special Allowance"])}</TableCell>
+                      <TableCell align="right">{NumberWithCommas(PayRound(monthRow.Basic))}</TableCell>
+                      <TableCell align="right">{NumberWithCommas(PayRound(monthRow.Bonus))}</TableCell>
+                      <TableCell align="right">{NumberWithCommas(PayRound(monthRow.HRA))}</TableCell>
+                      <TableCell align="right">{NumberWithCommas(PayRound(monthRow["Special Allowance"]))}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>

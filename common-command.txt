@@ -18,3 +18,5 @@ useful packages.json
 "@emotion/styled": "^11.9.3",
 
 https://mui.com/material-ui/react-table/
+
+Indian currency &#x20B9
