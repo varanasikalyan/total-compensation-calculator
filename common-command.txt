@@ -12,3 +12,9 @@ docker build -t varanasikalyan/total-compensation-calculator:latest .
 docker stop $(docker ps -a -q)
 
 docker rm $(docker ps -a -q)
+
+useful packages.json
+"@emotion/react": "^11.9.3",
+"@emotion/styled": "^11.9.3",
+
+https://mui.com/material-ui/react-table/
