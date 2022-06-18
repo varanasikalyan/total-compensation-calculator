@@ -341,25 +341,25 @@ const RECHARTS = {
 
 let yearGrouping = (fullData) => {
   let yearData = [];
-  fullData.forEach(year => {
-    if (year["name"] !== "") {
-      let idx = yearExists(yearData, year["name"].split(" ")[1])
+  fullData.forEach(pay => {
+    if (pay["name"] !== "") {
+      let idx = yearExists(yearData, pay["name"].split(" ")[1])
       if (idx > -1) {
-        yearData[idx]["Basic"] += year["Basic"]
-        yearData[idx]["Bonus"] += year["Bonus"]
-        yearData[idx]["HRA"] += year["HRA"]
-        yearData[idx]["Special Allowance"] += year["Special Allowance"]
-        yearData[idx]["Months"].push(year)
+        yearData[idx]["Basic"] += pay["Basic"]
+        yearData[idx]["Bonus"] += pay["Bonus"]
+        yearData[idx]["HRA"] += pay["HRA"]
+        yearData[idx]["Special Allowance"] += pay["Special Allowance"]
+        yearData[idx]["Months"].push(pay)
       } else {
         yearData.push(
           {
-            name: year["name"].split(" ")[1],
-            "Basic": year["Basic"],
-            "Bonus": year["Bonus"],
-            "HRA": year["HRA"],
-            "Special Allowance": year["Special Allowance"],
+            name: pay["name"].split(" ")[1],
+            "Basic": pay["Basic"],
+            "Bonus": pay["Bonus"],
+            "HRA": pay["HRA"],
+            "Special Allowance": pay["Special Allowance"],
             "Months": [
-              year
+              pay
             ]
           }
         )

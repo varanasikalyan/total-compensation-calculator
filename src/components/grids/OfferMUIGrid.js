@@ -15,7 +15,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 import { RECHARTS, yearGrouping } from '../mock/Mock';
-
+import { PayRound } from '../common/Helper';
 
 function Row(props) {
   const { row } = props;
@@ -36,10 +36,10 @@ function Row(props) {
         <TableCell component="th" scope="row">
           {row.name}
         </TableCell>
-        <TableCell align="right">{row.Basic}</TableCell>
-        <TableCell align="right">{row.Bonus}</TableCell>
-        <TableCell align="right">{row.HRA}</TableCell>
-        <TableCell align="right">{row["Special Allowance"]}</TableCell>
+        <TableCell align="right">{PayRound(row.Basic)}</TableCell>
+        <TableCell align="right">{PayRound(row.Bonus)}</TableCell>
+        <TableCell align="right">{PayRound(row.HRA)}</TableCell>
+        <TableCell align="right">{PayRound(row["Special Allowance"])}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
@@ -64,10 +64,10 @@ function Row(props) {
                       <TableCell component="th" scope="row">
                         {monthRow.name}
                       </TableCell>
-                      <TableCell align="right">{monthRow.Basic}</TableCell>
-                      <TableCell align="right">{monthRow.Bonus}</TableCell>
-                      <TableCell align="right">{monthRow.HRA}</TableCell>
-                      <TableCell align="right">{monthRow["Special Allowance"]}</TableCell>
+                      <TableCell align="right">{PayRound(monthRow.Basic)}</TableCell>
+                      <TableCell align="right">{PayRound(monthRow.Bonus)}</TableCell>
+                      <TableCell align="right">{PayRound(monthRow.HRA)}</TableCell>
+                      <TableCell align="right">{PayRound(monthRow["Special Allowance"])}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -90,17 +90,16 @@ Row.propTypes = {
         name: PropTypes.string.isRequired,
         Basic: PropTypes.number.isRequired,
         Bonus: PropTypes.number.isRequired,
-        HRA: PropTypes.string.isRequired,
+        HRA: PropTypes.number.isRequired,
         "Special Allowance": PropTypes.number.isRequired,
       }),
     ).isRequired,
-    HRA: PropTypes.string.isRequired,
+    HRA: PropTypes.number.isRequired,
     "Special Allowance": PropTypes.number.isRequired,
   }).isRequired,
 };
 
 const rows = yearGrouping(RECHARTS.data);
-console.log(rows);
 export default function CompensationSummaryTable() {
   return (
     <TableContainer component={Paper}>

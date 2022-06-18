@@ -13,3 +13,5 @@ export const GenerateRandom = (min = 0, max = 100) => {
     rand = rand + min;
     return rand;
 }
+
+export const PayRound = (pay) => Math.round((pay + Number.EPSILON) * 100) / 100
