@@ -380,4 +380,26 @@ let yearExists = (yearData, year) => {
   return found;
 }
 
-export {RECHARTS, yearGrouping};
+
+/* Charts js Mock */
+let yearLabels = (fullData) => {
+  let years = [];
+  fullData.forEach(pay => {
+    if (pay["name"] !== "") {
+      if (years.indexOf(pay["name"].split(" ")[1]) === -1) {
+        years.push(pay["name"].split(" ")[1])
+      }
+    }
+  });
+  return years;
+}
+
+let yearsAttributeArray = (fullData, attribute) => {
+  let attributeData = [];
+  fullData.forEach(pay => {
+    attributeData.push(pay[attribute]);
+  });
+  return attributeData;
+}
+
+export {RECHARTS, yearGrouping, yearLabels, yearsAttributeArray};

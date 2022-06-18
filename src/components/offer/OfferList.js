@@ -62,7 +62,7 @@ class OfferList extends Component {
 					}
 				</div>
 				<div className="col-12">
-					<button type="button" onClick={ this.handleNewOfferAddition } className="btn btn-sm btn-full btn-outline-secondary btn-sm" id="plus-btn">
+					<button type="button" onClick={ this.handleNewOfferAddition } className="btn btn-sm btn-full btn-outline-secondary" id="plus-btn">
 						<i className="fa fa-plus"></i> Compare another offer
 					</button>
 				</div>

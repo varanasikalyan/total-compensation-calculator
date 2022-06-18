@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { GenerateRandom } from '../common/Helper';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,6 +9,8 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+
+import { RECHARTS, yearGrouping, yearLabels, yearsAttributeArray } from '../mock/Mock';
 
 ChartJS.register(
   CategoryScale,
@@ -24,7 +25,7 @@ export const options = {
   plugins: {
     title: {
       display: true,
-      text: 'Chart.js Bar Chart - Stacked',
+      text: 'Year on Year',
     },
   },
   responsive: true,
@@ -38,33 +39,41 @@ export const options = {
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
-export const data = {
+const labels = yearLabels(RECHARTS.data);
+const labelsData = yearGrouping(RECHARTS.data);
+const chartsjsdata = {
   labels,
   datasets: [
     {
-      label: 'Dataset 1',
-      data: labels.map(() => GenerateRandom(-1000, 1000)),
-      backgroundColor: 'rgb(255, 99, 132)',
+      label: 'Basic',
+      data: yearsAttributeArray(labelsData, "Basic"),
+      backgroundColor: 'rgb(21, 67, 96)',
     },
     {
-      label: 'Dataset 2',
-      data: labels.map(() => GenerateRandom(-1000, 1000)),
-      backgroundColor: 'rgb(75, 192, 192)',
+      label: 'Bonus',
+      data: yearsAttributeArray(labelsData, "Bonus"),
+      backgroundColor: 'rgb(40, 116, 166)',
     },
     {
-      label: 'Dataset 3',
-      data: labels.map(() => GenerateRandom(-1000, 1000)),
-      backgroundColor: 'rgb(53, 162, 235)',
+      label: 'HRA',
+      data: yearsAttributeArray(labelsData, "HRA"),
+      backgroundColor: 'rgb(20, 90, 50)',
+    },
+    {
+      label: 'Special Allowance',
+      data: yearsAttributeArray(labelsData, "Special Allowance"),
+      backgroundColor: 'rgb(35, 155, 86)',
     },
   ],
 };
 
 class OfferChartJs extends Component {
-    render() {
-      return (<Bar options={options} data={data} />)
-    }
+  state = {
+
+  }
+  render() {
+    return (<Bar options={options} data={chartsjsdata} />)
+  }
 }
 
 export default OfferChartJs;
