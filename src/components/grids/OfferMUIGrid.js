@@ -36,10 +36,10 @@ function Row(props) {
         <TableCell component="th" scope="row">
           {row.name}
         </TableCell>
-        <TableCell align="right">{PayRound(row.Basic)}</TableCell>
-        <TableCell align="right">{PayRound(row.Bonus)}</TableCell>
-        <TableCell align="right">{PayRound(row.HRA)}</TableCell>
-        <TableCell align="right">{PayRound(row["Special Allowance"])}</TableCell>
+        <TableCell align="right">&#x20B9;{PayRound(row.Basic)}</TableCell>
+        <TableCell align="right">&#x20B9;{PayRound(row.Bonus)}</TableCell>
+        <TableCell align="right">&#x20B9;{PayRound(row.HRA)}</TableCell>
+        <TableCell align="right">&#x20B9;{PayRound(row["Special Allowance"])}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
@@ -52,10 +52,10 @@ function Row(props) {
                 <TableHead>
                   <TableRow>
                     <TableCell>Month</TableCell>
-                    <TableCell align="right">Basic</TableCell>
-                    <TableCell align="right">Bonus</TableCell>
-                    <TableCell align="right">HRA</TableCell>
-                    <TableCell align="right">Special Allowance</TableCell>
+                    <TableCell align="right">Basic (&#x20B9;)</TableCell>
+                    <TableCell align="right">Bonus (&#x20B9;)</TableCell>
+                    <TableCell align="right">HRA (&#x20B9;)</TableCell>
+                    <TableCell align="right">Special Allowance (&#x20B9;)</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -64,10 +64,10 @@ function Row(props) {
                       <TableCell component="th" scope="row">
                         {monthRow.name}
                       </TableCell>
-                      <TableCell align="right">{PayRound(monthRow.Basic)}</TableCell>
-                      <TableCell align="right">{PayRound(monthRow.Bonus)}</TableCell>
-                      <TableCell align="right">{PayRound(monthRow.HRA)}</TableCell>
-                      <TableCell align="right">{PayRound(monthRow["Special Allowance"])}</TableCell>
+                      <TableCell align="right">&#x20B9;{PayRound(monthRow.Basic)}</TableCell>
+                      <TableCell align="right">&#x20B9;{PayRound(monthRow.Bonus)}</TableCell>
+                      <TableCell align="right">&#x20B9;{PayRound(monthRow.HRA)}</TableCell>
+                      <TableCell align="right">&#x20B9;{PayRound(monthRow["Special Allowance"])}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -108,10 +108,10 @@ export default function CompensationSummaryTable() {
           <TableRow>
             <TableCell />
             <TableCell>Year</TableCell>
-            <TableCell align="right">Basic</TableCell>
-            <TableCell align="right">Bonus</TableCell>
-            <TableCell align="right">HRA</TableCell>
-            <TableCell align="right">Special Allowance</TableCell>
+            <TableCell align="right">Basic (&#x20B9;)</TableCell>
+            <TableCell align="right">Bonus (&#x20B9;)</TableCell>
+            <TableCell align="right">HRA (&#x20B9;)</TableCell>
+            <TableCell align="right">Special Allowance (&#x20B9;)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
