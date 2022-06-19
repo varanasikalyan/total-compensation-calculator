@@ -5,12 +5,12 @@ const SignedOutLinks = () => {
     return (
 		<Fragment>
 			<ul className="navbar-nav">
-				<li class="nav-item">
+				<li className="nav-item">
 					<Link to="/signin" className="nav-item nav-link">
 						<span className="icon-text">LOGIN</span>
 					</Link>
 				</li>
-				<li class="nav-item border-button">
+				<li className="nav-item border-button">
 					<Link to="/signup" className="nav-item nav-link">
 						<span className="icon-text">JOIN US</span>
 					</Link>
