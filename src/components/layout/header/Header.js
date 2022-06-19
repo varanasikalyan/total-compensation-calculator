@@ -7,39 +7,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPiggyBank } from '@fortawesome/free-solid-svg-icons';
 
 const Header = (props) => {
-	let userOptions;
-	if (props.user.is_authenticated === true) {
-		userOptions = <SignedInLinks />
-	}
-	else {
-		userOptions = <SignedOutLinks />
-	}
-    return (
-      <Fragment>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div className="container-fluid">
-            <Link to="/" className="navbar-brand">
-              <FontAwesomeIcon icon={faPiggyBank} className="money-wave-svg" />
-              <span className="app-name">Total Compensation Calculator</span>
-            </Link>
-            <form className="d-flex">
-              <button
-                className="form-control navbar-toggler me-2"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarsOptions"
-                aria-controls="navbarsOptions"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon" />
-              </button>
-              { userOptions }
-            </form>
-          </div>
-        </nav>
-      </Fragment>
-    );
+  return (
+    <Fragment>
+		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div className="container-fluid">
+				<Link to="/" className="navbar-brand">
+					<FontAwesomeIcon icon={faPiggyBank} className="money-wave-svg" />
+					<span className="app-name">Total Compensation Calculator</span>
+				</Link>
+				<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsOptions" aria-controls="navbarsOptions" aria-expanded="false" aria-label="Toggle navigation">
+					<span className="navbar-toggler-icon"></span>
+				</button>
+				<div className="collapse navbar-collapse" id="navbarsOptions">
+					<ul className="navbar-nav me-auto"></ul>
+					<form className="d-flex">
+						{
+							props.user.is_authenticated === false ? <SignedInLinks /> : <SignedOutLinks />
+						}
+					</form>
+				</div>
+			</div>
+		</nav>
+    </Fragment>
+  );
 }
 
 const mapStateToProps = (state) => {
