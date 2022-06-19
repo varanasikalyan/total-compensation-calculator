@@ -8,7 +8,7 @@ class OfferList extends Component {
 		offers: []
 	};
 
-	componentWillMount() {
+	componentDidMount() {
 		let newOffer = initialOffer;
 		this.setState({
 			offers: [newOffer]

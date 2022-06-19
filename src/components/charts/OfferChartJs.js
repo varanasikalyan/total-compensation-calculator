@@ -47,7 +47,7 @@ const chartsjsdata = {
     {
       label: 'Basic',
       data: yearsAttributeArray(labelsData, "Basic"),
-      backgroundColor: 'rgb(21, 67, 96)',
+      backgroundColor: 'rgb(0, 58, 93)',
     },
     {
       label: 'Bonus',
@@ -62,7 +62,7 @@ const chartsjsdata = {
     {
       label: 'Special Allowance',
       data: yearsAttributeArray(labelsData, "Special Allowance"),
-      backgroundColor: 'rgb(35, 155, 86)',
+      backgroundColor: 'rgb(40, 167, 69)',
     },
   ],
 };
