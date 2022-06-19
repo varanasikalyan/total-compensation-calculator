@@ -504,3 +504,17 @@ hr.dashed {
         width: 28px
     }
 }
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 0.05rem;
+    border-color: #28a745;
+}
+
+.navbar-toggler {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 0.05rem;
+    border-color: #28a745;
+}
