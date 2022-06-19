@@ -195,13 +195,6 @@ hr.dashed {
     height: 5vh
 }
 
-.app-name {
-    font-size: 25px;
-    font-weight: 500;
-    margin-left: 10px;
-    vertical-align: bottom
-}
-
 .square-primary,.square-success {
     border-bottom-style: none;
     border-color: #3498db;
@@ -433,13 +426,81 @@ hr.dashed {
     border-color: #007bff
 }
 
-.money-wave-svg {
-    color: #28a745;
-    height: 28px;
-    margin-right: 5px;
-    width: 28px
-}
-
 .hand {
     cursor: pointer;
+}
+
+@media (min-width: 320px) {  
+    .app-name {
+        font-size: 13px;
+        font-weight: 500;
+        margin-left: 5px;
+        vertical-align: bottom;
+    }
+    .money-wave-svg {
+        color: #28a745;
+        height: 17px;
+        margin-right: 5px;
+        width: 17px
+    }
+}
+
+@media (min-width: 544px) {  
+    .app-name {
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: 5px;
+        vertical-align: bottom;
+    }
+    .money-wave-svg {
+        color: #28a745;
+        height: 21px;
+        margin-right: 5px;
+        width: 21px
+    }
+}
+ 
+@media (min-width: 768px) {  
+    .app-name {
+        font-size: 19px;
+        font-weight: 500;
+        margin-left: 5px;
+        vertical-align: bottom;
+    }
+    .money-wave-svg {
+        color: #28a745;
+        height: 24px;
+        margin-right: 5px;
+        width: 24px
+    }
+}
+ 
+@media (min-width: 992px) { 
+    .app-name {
+        font-size: 22px;
+        font-weight: 500;
+        margin-left: 5px;
+        vertical-align: bottom;
+    } 
+    .money-wave-svg {
+        color: #28a745;
+        height: 26px;
+        margin-right: 5px;
+        width: 26px
+    }
+}
+ 
+@media (min-width: 1200px) {  
+    .app-name {
+        font-size: 25px;
+        font-weight: 500;
+        margin-left: 5px;
+        vertical-align: bottom;
+    }
+    .money-wave-svg {
+        color: #28a745;
+        height: 28px;
+        margin-right: 5px;
+        width: 28px
+    }
 }
