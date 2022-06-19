@@ -22,7 +22,7 @@ const Header = (props) => {
 					<ul className="navbar-nav me-auto"></ul>
 					<form className="d-flex">
 						{
-							props.user.is_authenticated === false ? <SignedInLinks /> : <SignedOutLinks />
+							props.user.is_authenticated === true ? <SignedInLinks /> : <SignedOutLinks />
 						}
 					</form>
 				</div>
