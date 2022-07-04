@@ -37,7 +37,9 @@ hr.dashed {
     margin: 0 auto;
     max-width: 330px;
     padding: 15px;
-    width: 100%
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    text-align: center;
 }
 
 .form-signin .checkbox {
@@ -53,14 +55,14 @@ hr.dashed {
 }
 
 .wrap-login-style {
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
     display: inline-block;
     margin-bottom: 50px;
     margin-top: 50px;
     overflow: hidden;
     text-align: center;
-    width: 350px
+    width: 350px;
 }
 
 .form-signin .form-control:focus {
@@ -82,11 +84,7 @@ hr.dashed {
     text-decoration: none!important
 }
 
-#signInContainer,#signUpContainer {
-    text-align: center
-}
-
-#signInContainer {
+.sign-in-container {
     min-height: 60vh;
     padding-bottom: 25px
 }
@@ -250,12 +248,12 @@ hr.dashed {
 
 .border-button {
     border: 1px solid #b2babb;
-    border-radius: 2px
+    border-radius: 0px
 }
 
 .border-button:hover {
     border: 1px solid #28a745;
-    border-radius: 2px
+    border-radius: 0px
 }
 
 .wrapper {

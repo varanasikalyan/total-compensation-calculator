@@ -57,81 +57,79 @@ class SignUp extends Component {
             <div>
                 <Notifications options={{ options }}/>
                 { this.props.user.loading ? <Loading /> :
-                    <div className="container" id="signUpContainer">
+                    <div className="container">
                         <Notifications options={{ options }}/>
-                        <div className="wrap-login-style">
-                            <form method="POST" onSubmit={this.handleSubmit} className="form-signin">
-                                <fieldset className="form-group">
-                                    <FontAwesomeIcon icon={faAddressCard} className="fa-4x sign-up-svg" />
-                                    <h1 className="border-bottom mb-4 h3 mb-3 font-weight-normal">Join Us</h1>
-                                    <div className="form-group">
-                                        <label className="form-control-label" htmlFor="username">Username</label>
-                                        <input
-                                            className="form-control form-control-lg"
-                                            id="username"
-                                            name="username"
-                                            required=""
-                                            type="text"
-                                            autoComplete="username"
-                                            onChange={this.handleChange}
-                                            value={this.state.username}
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label className="form-control-label" htmlFor="email">Email</label>
-                                        <input
-                                            className="form-control form-control-lg"
-                                            id="email"
-                                            name="email"
-                                            required=""
-                                            type="text"
-                                            autoComplete="username-email"
-                                            onChange={this.handleChange}
-                                            value={this.state.email}
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label className="form-control-label" htmlFor="password">Password</label>
-                                        <input
-                                            className="form-control form-control-lg"
-                                            id="password"
-                                            name="password"
-                                            required=""
-                                            type="password"
-                                            autoComplete="new-password"
-                                            onChange={this.handleChange}
-                                            value={this.state.password}
-                                            />
-                                    </div>
-                                    <div className="form-group">
-                                        <label className="form-control-label" htmlFor="confirm_password">Confirm Password</label>
-                                        <input
-                                            className="form-control form-control-lg"
-                                            id="confirm_password"
-                                            name="confirm_password"
-                                            required=""
-                                            type="password"
-                                            autoComplete="new-password"
-                                            onChange={this.handleChange}
-                                            value={this.state.confirm_password}
-                                        />
-                                    </div>
-                                </fieldset>
+                        <form method="POST" onSubmit={this.handleSubmit} className="form-signin">
+                            <fieldset className="form-group">
+                                <FontAwesomeIcon icon={faAddressCard} className="fa-4x sign-up-svg" />
+                                <h1 className="border-bottom mb-4 h3 mb-3 font-weight-normal">Join Us</h1>
                                 <div className="form-group">
+                                    <label className="form-control-label" htmlFor="username">Username</label>
                                     <input
-                                        className="btn btn-sm btn-md btn-success btn-block"
-                                        id="submit"
-                                        name="submit"
-                                        type="submit"
-                                        value="Sign Up"
+                                        className="form-control form-control-lg"
+                                        id="username"
+                                        name="username"
+                                        required=""
+                                        type="text"
+                                        autoComplete="username"
+                                        onChange={this.handleChange}
+                                        value={this.state.username}
                                     />
                                 </div>
-                            </form>
+                                <div className="form-group">
+                                    <label className="form-control-label" htmlFor="email">Email</label>
+                                    <input
+                                        className="form-control form-control-lg"
+                                        id="email"
+                                        name="email"
+                                        required=""
+                                        type="text"
+                                        autoComplete="username-email"
+                                        onChange={this.handleChange}
+                                        value={this.state.email}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label className="form-control-label" htmlFor="password">Password</label>
+                                    <input
+                                        className="form-control form-control-lg"
+                                        id="password"
+                                        name="password"
+                                        required=""
+                                        type="password"
+                                        autoComplete="new-password"
+                                        onChange={this.handleChange}
+                                        value={this.state.password}
+                                        />
+                                </div>
+                                <div className="form-group">
+                                    <label className="form-control-label" htmlFor="confirm_password">Confirm Password</label>
+                                    <input
+                                        className="form-control form-control-lg"
+                                        id="confirm_password"
+                                        name="confirm_password"
+                                        required=""
+                                        type="password"
+                                        autoComplete="new-password"
+                                        onChange={this.handleChange}
+                                        value={this.state.confirm_password}
+                                    />
+                                </div>
+                            </fieldset>
+                            <div className="form-group">
+                                <input
+                                    className="btn btn-sm btn-md btn-success btn-block"
+                                    id="submit"
+                                    name="submit"
+                                    type="submit"
+                                    value="Sign Up"
+                                />
+                            </div>
                             <label id="alreadyaMember">
                                 Already a member?&nbsp;
                                 <a href="/signin" id="signIn">Sign In</a>
                             </label>
-                        </div>
+                        </form>
                     </div>
                 }
             </div>
