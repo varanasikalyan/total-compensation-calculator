@@ -64,6 +64,20 @@ class SignIn extends Component {
 							</div>
 							<a href="/forgot" id="forgot">Forgot your password?</a>
 							<br/>
+							<br/> 
+							<a href="/github">
+								<i className="fa-brands fa-github o-auth-svg"></i>
+							</a>
+							<a href="/facebook">
+								<i className="fa-brands fa-facebook-f o-auth-svg"></i>
+							</a>
+							<a href="/google">
+								<i className="fa-brands fa-google o-auth-svg"></i>
+							</a>
+							<a href="/twitter">
+								<i className="fa-brands fa-twitter o-auth-svg"></i>
+							</a>
+							<br/>
 							<br/>
 							<label id="notaMember">Not a member?&nbsp;<a href="/signup" id="signUp">Join Us</a></label>        
 						</form>

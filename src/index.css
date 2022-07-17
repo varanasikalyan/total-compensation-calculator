@@ -392,6 +392,17 @@ hr.dashed {
     margin-bottom: 30px
 }
 
+.o-auth-svg {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #2C3E50;
+    font-size: 20px;
+}
+
+.o-auth-svg:hover {
+    color: black;
+}
+
 .sign-up-svg {
     color: #28a745
 }
