@@ -28,8 +28,8 @@ hr.dashed {
 }
 
 .form-control:focus {
-    border-color: #007bff;
-    box-shadow: .5px .5px .5px rgba(0,123,255,.8) inset,.5px .5px .5px rgba(0,123,255,.8);
+    border-color: #003a5d;
+    box-shadow: .5px .5px .5px rgba(0, 58, 93,.8) inset,.5px .5px .5px rgba(0, 58, 93,.8);
     z-index: 2
 }
 
@@ -66,8 +66,8 @@ hr.dashed {
 }
 
 .form-signin .form-control:focus {
-    border-color: #3498db;
-    box-shadow: 1px 1px 1px rgba(40,167,69,.8) inset,1px 1px 1px rgba(40,167,69,.8);
+    border-color: #003a5d;
+    box-shadow: .5px .5px .5px rgba(0, 58, 93,.8) inset,.5px .5px .5px rgba(0, 58, 93,.8);
     z-index: 2
 }
 
@@ -80,7 +80,7 @@ hr.dashed {
 }
 
 #forgot {
-    color: #3498db!important;
+    color: #003a5d!important;
     text-decoration: none!important
 }
 
@@ -94,14 +94,14 @@ hr.dashed {
 }
 
 #signIn,#signUp {
-    color: #3498db!important;
+    color: #003a5d!important;
     text-decoration: none!important
 }
 
 #myFooter {
-    background: -webkit-gradient(linear,left top,right bottom,from(#003a5d),to(#0091c2));
-    background: linear-gradient(#003a5d,#0091c2);
-    background-color: #0091c2;
+    background: -webkit-gradient(linear,left top,right bottom,from(#003a5d),to(#003a5d));
+    background: linear-gradient(#003a5d,#003a5d);
+    background-color: #003a5d;
     box-shadow: 0-2px 1px #566573;
     color: #fff
 }
@@ -195,14 +195,14 @@ hr.dashed {
 
 .square-primary,.square-success {
     border-bottom-style: none;
-    border-color: #3498db;
+    border-color: #003a5d;
     color: #28a745;
     padding-bottom: 0
 }
 
 .square-success {
     border-color: #28a745;
-    color: #3498db
+    color: #003a5d
 }
 
 #companyName {
@@ -227,7 +227,7 @@ hr.dashed {
 }
 
 .dropdown-text:hover,.icon-text {
-    color: #3498db
+    color: #003a5d
 }
 
 .icon-text {
@@ -388,7 +388,7 @@ hr.dashed {
 }
 
 .sign-in-svg,.sign-up-svg {
-    color: #007bff;
+    color: #003a5d;
     margin-bottom: 30px
 }
 
@@ -417,7 +417,7 @@ hr.dashed {
 }
 
 .gear-svg,.update-svg {
-    color: #007bff;
+    color: #003a5d;
     margin-right: 5px
 }
 
@@ -431,8 +431,8 @@ hr.dashed {
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: #003a5d;
+    border-color: #003a5d
 }
 
 .hand {
